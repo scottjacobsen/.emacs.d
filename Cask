@@ -23,3 +23,4 @@
 (depends-on "smartparens")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
+(depends-on "zenburn-theme")
