@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: job
+# key: job
+# --
+module ${1:`(classify-buffer-name)`}
+  ${3:include Resque::Plugins::UniqueJob}
+  @queue = ${2::email}
+
+  def self.perform($4)
+    $0
+  end
+end

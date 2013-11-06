@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: integration
+# key: integration
+# --
+require 'test_helper'
+require_relative 'givens'
+
+class ${1:`(classify-buffer-name)`} < ActionDispatch:: IntegrationTest
+  include Givens
+
+  setup do
+    $0
+  end
+end

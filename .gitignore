@@ -1,0 +1,10 @@
+.cask
+.org-id-locations
+tutorial
+tramp
+rcirc-log
+projectile-bookmarks.eld
+projectile.cache
+*.elc
+bookmarks
+semanticdb
