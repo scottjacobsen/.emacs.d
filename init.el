@@ -38,6 +38,8 @@
 (load "07projectile.el")
 (load "09highlight-indentation.el")
 (load "10yasnippet.el")
+(load "11wrap-region.el")
+
 ;;;
 ;;; tags
 ;;;
@@ -256,9 +258,3 @@ This command shares argument histories with \\[rgrep] and \\[grep]."
 
 (require 'yari)
 (add-hook 'ruby-mode-hook (lambda() (local-set-key [f1] 'yari)))
-
-;;;
-;;; wrap region
-;;;
-(require 'wrap-region)
-(wrap-region-mode t)
