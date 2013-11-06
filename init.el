@@ -16,7 +16,6 @@
  '(org-mobile-directory "~/Dropbox/MobileOrg")
  '(org-modules (quote (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
  '(safe-local-variable-values (quote ((encoding . utf-8))))
- '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
@@ -38,7 +37,7 @@
 (load "07projectile.el")
 (load "09highlight-indentation.el")
 (load "10yasnippet.el")
-(load "11wrap-region.el")
+(load "12smartparens.el")
 
 ;;;
 ;;; tags

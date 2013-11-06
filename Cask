@@ -18,6 +18,6 @@
 (depends-on "projectile")
 (depends-on "rvm")
 (depends-on "s")
-(depends-on "wrap-region")
+(depends-on "smartparens")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")

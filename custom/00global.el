@@ -1,8 +1,6 @@
 (server-start)
 (scroll-bar-mode -1)
 (setq-default indent-tabs-mode nil)
-(show-paren-mode 1)
-(electric-pair-mode 1)
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 (global-set-key (kbd "C-c s") 'ansi-term)
@@ -41,8 +39,6 @@
 )
 
 (setq tramp-backup-directory-alist backup-directory-alist)
-
-(setq show-paren-style 'mixed)
 
 (setq Man-notify-method 'aggressive)
 
