@@ -75,9 +75,14 @@
 (add-to-list 'hs-special-modes-alist
 	     '(ruby-mode
 	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
+	       (lambda (arg) (ruby-end-of-block)) nil)
+
+             '(enh-ruby-mode
+	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
 	       (lambda (arg) (ruby-end-of-block)) nil))
 
 (add-hook 'ruby-mode-hook 'hs-minor-mode)
+(add-hook 'enh-ruby-mode-hook 'hs-minor-mode)
 (add-hook 'lisp-mode-hook 'hs-minor-mode)
 (add-hook 'js-mode-hook 'hs-minor-mode)
 (add-hook 'js-mode-hook (lambda() (setq tab-width 4)))
@@ -257,3 +262,4 @@ This command shares argument histories with \\[rgrep] and \\[grep]."
 
 (require 'yari)
 (add-hook 'ruby-mode-hook (lambda() (local-set-key [f1] 'yari)))
+(add-hook 'enh-ruby-mode-hook (lambda() (local-set-key [f1] 'yari)))

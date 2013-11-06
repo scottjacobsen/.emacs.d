@@ -1,1 +1,1 @@
-(global-set-key "\C-d" 'dash-at-point)
+(global-set-key "\C-cd" 'dash-at-point)
