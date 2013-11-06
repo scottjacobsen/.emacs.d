@@ -9,3 +9,4 @@
 (add-hook 'ruby-mode-hook (lambda() (local-set-key (kbd "M-SPC") 'completion-at-point)))
 (add-hook 'ruby-mode-hook (lambda() (setq tab-width 2)))
 (load "ruby-flymake")
+(add-hook 'ruby-mode-hook (lambda() (local-set-key "\C-cd" 'yari)))

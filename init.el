@@ -38,7 +38,7 @@
 (load "09highlight-indentation.el")
 (load "10yasnippet.el")
 (load "12smartparens.el")
-(load "14dash-at-point.el")
+;;; (load "14dash-at-point.el")
 (load "15zenburn-theme.el")
 
 ;;;
@@ -257,11 +257,3 @@ This command shares argument histories with \\[rgrep] and \\[grep]."
       number-of-diary-entries 7)
 (add-hook 'diary-display-hook 'fancy-diary-display)
 (add-hook 'today-visible-calendar-hook 'calendar-mark-today)
-
-;;;
-;;; Ruby documentation
-;;;
-
-(require 'yari)
-(add-hook 'ruby-mode-hook (lambda() (local-set-key [f1] 'yari)))
-(add-hook 'enh-ruby-mode-hook (lambda() (local-set-key [f1] 'yari)))

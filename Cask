@@ -22,5 +22,6 @@
 (depends-on "s")
 (depends-on "smartparens")
 (depends-on "yaml-mode")
+(depends-on "yari")
 (depends-on "yasnippet")
 (depends-on "zenburn-theme")
