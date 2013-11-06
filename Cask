@@ -3,6 +3,7 @@
 
 (depends-on "cask")
 (depends-on "dash")
+(depends-on "dash-at-point")
 (depends-on "enh-ruby-mode")
 (depends-on "epl")
 (depends-on "f")
