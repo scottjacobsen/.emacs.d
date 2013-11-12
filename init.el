@@ -35,6 +35,7 @@
 (load "05rvm.el")
 (load "06ruby.el")
 (load "07projectile.el")
+(load "08ido.el")
 (load "09highlight-indentation.el")
 (load "10yasnippet.el")
 (load "12smartparens.el")
