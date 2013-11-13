@@ -22,6 +22,7 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (display-time-mode)
 (global-set-key (kbd "C-c m") 'magit-status)
+(global-hl-line-mode)
 (when (equal system-type 'darwin)
   (setenv "PATH" (concat "/opt/local/bin:/usr/local/bin:" (getenv "PATH")))
   (push "/opt/local/bin" exec-path))
