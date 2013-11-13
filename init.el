@@ -12,6 +12,7 @@
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
+ '(js-enabled-frameworks (quote (javascript)))
  '(org-agenda-files (quote ("~/org/gtd.org")))
  '(org-mobile-directory "~/Dropbox/MobileOrg")
  '(org-modules (quote (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
@@ -88,7 +89,6 @@
 (add-hook 'enh-ruby-mode-hook 'hs-minor-mode)
 (add-hook 'lisp-mode-hook 'hs-minor-mode)
 (add-hook 'js-mode-hook 'hs-minor-mode)
-(add-hook 'js-mode-hook (lambda() (setq tab-width 4)))
 (global-set-key (kbd "M-+") 'hs-toggle-hiding)
 
 ;;;
@@ -107,7 +107,7 @@
                      (set (make-local-variable 'compile-command)
                            (concat "~/node_modules/jslint/bin/jslint.js --terse "
                                    (buffer-file-name)))) t)
-
+(setq js-indent-level 2)
 ;;;
 ;;; indent magic
 ;;;
