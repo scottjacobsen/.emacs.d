@@ -13,6 +13,7 @@
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
  '(js-enabled-frameworks (quote (javascript)))
+ '(js2-basic-offset 2)
  '(org-agenda-files (quote ("~/org/gtd.org")))
  '(org-mobile-directory "~/Dropbox/MobileOrg")
  '(org-modules (quote (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
@@ -40,8 +41,9 @@
 (load "09highlight-indentation.el")
 (load "10yasnippet.el")
 (load "12smartparens.el")
-;;; (load "14dash-at-point.el")
+(load "14dash-at-point.el")
 (load "15zenburn-theme.el")
+(load "16js2-mode.el")
 
 ;;;
 ;;; tags
@@ -94,7 +96,7 @@
 ;;;
 ;;; Flyspell mode
 ;;;
-(dolist (hook '(enh-ruby-mode-hook ruby-mode-hook markdown-mode-hook haml-mode-hook js-mode))
+(dolist (hook '(enh-ruby-mode-hook ruby-mode-hook markdown-mode-hook haml-mode-hook js-mode js2-mode))
   (add-hook hook (lambda () (flyspell-prog-mode)))
   )
 
@@ -102,16 +104,10 @@
   (add-hook hook (lambda () (flyspell-mode)))
   )
 
-(add-to-list 'auto-mode-alist '("\\.js.erb$" . js-mode))
-(add-hook 'js-mode-hook (lambda ()
-                     (set (make-local-variable 'compile-command)
-                           (concat "~/node_modules/jslint/bin/jslint.js --terse "
-                                   (buffer-file-name)))) t)
-(setq js-indent-level 2)
 ;;;
 ;;; indent magic
 ;;;
-(dolist (hook '(enh-ruby-mode-hook ruby-mode-hook markdown-mode-hook js-mode))
+(dolist (hook '(enh-ruby-mode-hook ruby-mode-hook markdown-mode-hook js-mode js2-mode))
   (add-hook hook (lambda () (electric-indent-mode)))
   )
 
