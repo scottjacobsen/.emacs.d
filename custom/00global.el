@@ -4,6 +4,7 @@
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 (global-set-key (kbd "C-c s") 'ansi-term)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
 (setq tramp-default-mthod "ssh")
 (setq kill-read-only-ok 1)
 (setq dired-isearch-filenames t)
