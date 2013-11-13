@@ -8,3 +8,4 @@ projectile.cache
 *.elc
 bookmarks
 semanticdb
+eshell
