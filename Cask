@@ -7,6 +7,7 @@
 (depends-on "enh-ruby-mode")
 (depends-on "epl")
 (depends-on "f")
+(depends-on "fliptext")
 (depends-on "flx-ido")
 (depends-on "git-commit-mode")
 (depends-on "git-rebase-mode")

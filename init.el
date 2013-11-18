@@ -27,6 +27,7 @@
 
 (require 'pallet)
 (require 'uniquify)
+(require 'fliptext)
 
 (add-to-list 'load-path "~/.emacs.d/custom")
 (load "00global.el")
