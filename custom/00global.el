@@ -50,3 +50,4 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 (global-auto-revert-mode)
+(defalias 'yes-or-no-p 'y-or-n-p)
