@@ -13,6 +13,7 @@
 (depends-on "git-rebase-mode")
 (depends-on "haml-mode")
 (depends-on "highlight-indentation")
+(depends-on "iedit")
 (depends-on "js2-mode")
 (depends-on "lua-mode")
 (depends-on "markdown-mode")
