@@ -87,7 +87,7 @@
 
              '(enh-ruby-mode
 	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
-	       (lambda (arg) (ruby-end-of-block)) nil))
+	       (lambda (arg) (enh-ruby-end-of-block)) nil))
 
 (add-hook 'ruby-mode-hook 'hs-minor-mode)
 (add-hook 'enh-ruby-mode-hook 'hs-minor-mode)
