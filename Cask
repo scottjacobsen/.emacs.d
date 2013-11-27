@@ -27,3 +27,4 @@
 (depends-on "yari")
 (depends-on "yasnippet")
 (depends-on "zenburn-theme")
+(depends-on "magit")

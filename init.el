@@ -46,7 +46,7 @@
 (load "14dash-at-point.el")
 (load "15zenburn-theme.el")
 (load "16js2-mode.el")
-
+(load "17git.el")
 ;;;
 ;;; tags
 ;;;
