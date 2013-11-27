@@ -51,3 +51,4 @@
 
 (global-auto-revert-mode)
 (defalias 'yes-or-no-p 'y-or-n-p)
+(setq-default frame-title-format "%b (%f)")
