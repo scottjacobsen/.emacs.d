@@ -77,23 +77,6 @@
 ;;;
 (add-hook 'css-mode-hook (lambda() (setq tab-width 4)))
 
-;;;
-;;; Hide Show setup
-;;;
-(add-to-list 'hs-special-modes-alist
-	     '(ruby-mode
-	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
-	       (lambda (arg) (ruby-end-of-block)) nil)
-
-             '(enh-ruby-mode
-	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
-	       (lambda (arg) (enh-ruby-end-of-block)) nil))
-
-(add-hook 'ruby-mode-hook 'hs-minor-mode)
-(add-hook 'enh-ruby-mode-hook 'hs-minor-mode)
-(add-hook 'lisp-mode-hook 'hs-minor-mode)
-(add-hook 'js-mode-hook 'hs-minor-mode)
-(global-set-key (kbd "M-+") 'hs-toggle-hiding)
 
 ;;;
 ;;; Flyspell mode
