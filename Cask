@@ -24,6 +24,7 @@
 (depends-on "projectile")
 (depends-on "rvm")
 (depends-on "s")
+(depends-on "scss-mode")
 (depends-on "smartparens")
 (depends-on "yaml-mode")
 (depends-on "yari")

@@ -47,6 +47,9 @@
 (load "15zenburn-theme.el")
 (load "16js2-mode.el")
 (load "17git.el")
+(load "18css.el")
+(load "19scss.el")
+
 ;;;
 ;;; tags
 ;;;
@@ -71,11 +74,6 @@
   (or (and buffer-file-name (camelize-file buffer-file-name))
       (and buffer-name (camelize-file buffer-name))
       ("Class")))
-
-;;;
-;;; css
-;;;
-(add-hook 'css-mode-hook (lambda() (setq tab-width 4)))
 
 
 ;;;
