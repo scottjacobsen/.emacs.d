@@ -153,7 +153,7 @@
   (interactive "sZeus: ")
   (let ((default-directory (zeus-root)))
     (set-process-sentinel
-     (start-process-shell-command "zeus" "*zeus*" (concat "zeus " command))
+     (start-process-shell-command "zeus" "*zeus*" (concat "~/.rvm/gems/ruby-2.0.0-p353/bin/zeus " command))
      (set-window-buffer nil "*zeus*"))
     ))
 
