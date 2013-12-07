@@ -7,3 +7,4 @@
 (add-to-list 'auto-mode-alist '("^.autotest$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("^Guardfile$" . enh-ruby-mode))
 (add-hook 'enh-ruby-mode-hook (lambda() (local-set-key "\C-cd" 'yari)))
+(add-hook 'enh-ruby-mode-hook 'robe-mode)

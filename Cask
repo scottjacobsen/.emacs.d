@@ -22,6 +22,7 @@
 (depends-on "minimap")
 (depends-on "pallet")
 (depends-on "projectile")
+(depends-on "robe")
 (depends-on "rvm")
 (depends-on "s")
 (depends-on "scss-mode")
