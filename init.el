@@ -14,6 +14,7 @@
  '(inhibit-startup-screen t)
  '(js-enabled-frameworks (quote (javascript)))
  '(js2-basic-offset 2)
+ '(newsticker-url-list (quote (("Rubygems | Latest Versions for passenger" "https://rubygems.org/gems/passenger/versions.atom" nil nil nil) ("News/NYT > Home Page" "http://feeds.nytimes.com/nyt/rss/HomePage" nil nil nil) ("News/Slashdot" "http://rss.slashdot.org/Slashdot/slashdot" nil nil nil) ("News/Hacker News" "http://news.ycombinator.com/rss" nil nil nil) ("Ruby News" "http://www.ruby-lang.org/en/feeds/news.rss" nil nil nil) ("cve/All National Vulnerability Database" "http://nvd.nist.gov/download/nvd-rss.xml" nil nil nil))))
  '(org-agenda-files (quote ("~/org/gtd.org")))
  '(org-mobile-directory "~/Dropbox/MobileOrg")
  '(org-modules (quote (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
