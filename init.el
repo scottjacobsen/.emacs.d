@@ -50,6 +50,9 @@
 (load "18css.el")
 (load "19scss.el")
 
+(require 'auto-complete-config)
+(ac-config-default)
+
 ;;;
 ;;; tags
 ;;;

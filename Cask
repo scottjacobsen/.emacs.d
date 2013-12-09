@@ -1,6 +1,7 @@
 (source melpa)
 (source gnu)
 
+(depends-on "auto-complete")
 (depends-on "cask")
 (depends-on "dash")
 (depends-on "dash-at-point")
