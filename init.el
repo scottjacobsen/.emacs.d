@@ -31,6 +31,10 @@
 (require 'fliptext)
 (require 'iedit)
 
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
+
 (add-to-list 'load-path "~/.emacs.d/custom")
 (load "00global.el")
 (load "01markdown.el")
@@ -52,8 +56,6 @@
 (load "18css.el")
 (load "19scss.el")
 
-(require 'auto-complete-config)
-(ac-config-default)
 
 ;;;
 ;;; tags
