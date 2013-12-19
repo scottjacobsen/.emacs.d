@@ -2,6 +2,7 @@
 (source gnu)
 
 (depends-on "auto-complete")
+(depends-on "bundler")
 (depends-on "cask")
 (depends-on "dash")
 (depends-on "dash-at-point")
