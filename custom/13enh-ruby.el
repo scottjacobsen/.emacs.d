@@ -6,6 +6,6 @@
 (add-to-list 'auto-mode-alist '("^config.ru$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("^.autotest$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("^Guardfile$" . enh-ruby-mode))
-(add-hook 'enh-ruby-mode-hook (lambda() (local-set-key "\C-cd" 'yari)))
+(add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
 (push 'ac-source-robe ac-sources)

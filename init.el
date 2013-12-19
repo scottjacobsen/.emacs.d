@@ -44,6 +44,7 @@
 (load "09highlight-indentation.el")
 (load "10yasnippet.el")
 (load "12smartparens.el")
+(load "13enh-ruby.el")
 (load "14dash-at-point.el")
 (load "15zenburn-theme.el")
 (load "16js2-mode.el")
