@@ -4,6 +4,7 @@
 (depends-on "auto-complete")
 (depends-on "bundler")
 (depends-on "cask")
+(depends-on "chruby")
 (depends-on "dash")
 (depends-on "dash-at-point")
 (depends-on "enh-ruby-mode")
