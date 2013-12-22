@@ -30,6 +30,7 @@
 (depends-on "s")
 (depends-on "scss-mode")
 (depends-on "smartparens")
+(depends-on "yagist")
 (depends-on "yaml-mode")
 (depends-on "yari")
 (depends-on "yasnippet")
