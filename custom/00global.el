@@ -55,3 +55,13 @@
 (global-auto-revert-mode)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq-default frame-title-format "%b (%f)")
+
+(add-to-list 'auto-mode-alist '("\\.envrc$" . sh-mode))
+
+
+(defun touch ()
+     "updates mtime on the file for the current buffer"
+     (interactive)
+     (shell-command (concat "touch " (shell-quote-argument (buffer-file-name))))
+     (clear-visited-file-modtime))
+(global-set-key (kbd "C-c C-t") 'touch)

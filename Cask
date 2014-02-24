@@ -26,6 +26,7 @@
 (depends-on "projectile")
 (depends-on "robe")
 (depends-on "ruby-refactor")
+(depends-on "ruby-tools")
 (depends-on "rvm")
 (depends-on "s")
 (depends-on "scss-mode")
