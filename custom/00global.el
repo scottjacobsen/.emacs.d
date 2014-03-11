@@ -1,7 +1,7 @@
 (if (and (fboundp 'server-running-p)
          (not (server-running-p)))
     (server-start))
-
+(setq ring-bell-function 'ignore)
 (scroll-bar-mode -1)
 (setq-default indent-tabs-mode nil)
 (global-set-key (kbd "C-z") 'undo)
