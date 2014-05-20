@@ -8,4 +8,3 @@
 (add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
 (add-hook 'enh-ruby-mode-hook 'ruby-tools-mode)
-(push 'ac-source-robe ac-sources)
