@@ -44,19 +44,18 @@
 (load "02haml.el")
 (load "03lua.el")
 (load "04yaml.el")
-(load "20chruby.el")
 (load "06ruby.el")
 (load "07projectile.el")
 (load "08ido.el")
 (load "09highlight-indentation.el")
 (load "10yasnippet.el")
 (load "12smartparens.el")
-;;(load "13enh-ruby.el")
 (load "15zenburn-theme.el")
 (load "16js2-mode.el")
 (load "17git.el")
 (load "18css.el")
 (load "19scss.el")
+(load "20chruby.el")
 
 ;;;
 ;;; tags

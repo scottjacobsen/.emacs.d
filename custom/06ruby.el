@@ -1,3 +1,4 @@
+(require 'ruby-tools)
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.god$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
@@ -5,6 +6,7 @@
 (add-to-list 'auto-mode-alist '("^config.ru$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("^.autotest$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("^Guardfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 (add-hook 'ruby-mode-hook (lambda() (local-set-key "k" 'self-insert-command))) ; WTF sometimes k isn't k in ruby mode?
 (add-hook 'ruby-mode-hook (lambda() (local-set-key (kbd "M-SPC") 'completion-at-point)))
 (add-hook 'ruby-mode-hook (lambda() (setq tab-width 2)))
