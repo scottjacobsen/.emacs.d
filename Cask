@@ -5,6 +5,7 @@
 (depends-on "bundler")
 (depends-on "cask")
 (depends-on "chruby")
+(depends-on "coffee-mode")
 (depends-on "dash")
 (depends-on "epl")
 (depends-on "f")
