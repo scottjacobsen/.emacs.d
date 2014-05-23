@@ -10,6 +10,7 @@
  '(display-time-day-and-date t)
  '(display-time-default-load-average 0)
  '(display-time-mode t)
+ '(enh-ruby-check-syntax nil)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
@@ -134,6 +135,8 @@
  '(diff-refine-added ((t (:inherit diff-refine-change :background "black" :foreground "#00bb00" :inverse-video t))))
  '(diff-refine-removed ((t (:inherit diff-refine-change :background "#660000" :foreground "black" :inverse-video nil))))
  '(diff-removed ((t (:foreground "red"))))
+ '(erm-syn-errline ((t nil)))
+ '(erm-syn-warnline ((t nil)))
  '(log-view-message ((t nil))))
 
 ;;;

@@ -7,6 +7,7 @@
 (depends-on "chruby")
 (depends-on "coffee-mode")
 (depends-on "dash")
+(depends-on "enh-ruby-mode")
 (depends-on "epl")
 (depends-on "f")
 (depends-on "fliptext")
