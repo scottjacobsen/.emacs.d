@@ -59,6 +59,7 @@
 (load "19scss.el")
 (load "20chruby.el")
 (load "21erc.el")
+(load "22column-enforce-mode.el")
 
 ;;;
 ;;; tags
@@ -129,6 +130,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-enforce-face ((t (:background "black"))))
  '(diff-added ((t (:foreground "green"))))
  '(diff-file-header ((t (:foreground "cyan" :box (:line-width 1 :color "deep sky blue") :weight bold))))
  '(diff-header ((t nil)))
