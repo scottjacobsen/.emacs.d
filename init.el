@@ -58,6 +58,7 @@
 (load "18css.el")
 (load "19scss.el")
 (load "20chruby.el")
+(load "21erc.el")
 
 ;;;
 ;;; tags
