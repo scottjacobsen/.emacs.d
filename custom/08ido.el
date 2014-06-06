@@ -13,3 +13,5 @@
     (tags-apropos (ido-completing-read "Tag: " tag-names))))
 
 (global-set-key "\M-?" 'my-ido-find-tag)
+
+(provide '08ido)

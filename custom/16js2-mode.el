@@ -7,3 +7,4 @@
                            (concat "~/node_modules/jslint/bin/jslint.js --terse "
                                    (buffer-file-name)))) t)
 (setq js-indent-level 2)
+(provide '16js2-mode)

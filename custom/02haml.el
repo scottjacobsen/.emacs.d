@@ -6,3 +6,5 @@
           (lambda ()
             (set (make-local-variable 'electric-indent-functions)
                  (list (lambda (arg) 'no-indent)))))
+
+(provide '02haml)

@@ -65,3 +65,5 @@
      (shell-command (concat "touch " (shell-quote-argument (buffer-file-name))))
      (clear-visited-file-modtime))
 (global-set-key (kbd "C-c C-t") 'touch)
+
+(provide '00global)
