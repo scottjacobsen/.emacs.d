@@ -33,7 +33,6 @@
 (defun revert-buffer-no-confirm ()
     "Revert buffer without confirmation."
     (interactive) (revert-buffer t t))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 

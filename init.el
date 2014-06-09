@@ -50,8 +50,6 @@
 ;;; tags
 ;;;
 (setq tags-revert-without-query t)
-(require 'etags-select)
-(global-set-key "\M-." 'etags-select-find-tag-at-point)
 
 (defun camelize (string)
   "CamelCase an underscore_delimited_string"
