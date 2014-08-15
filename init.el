@@ -5,7 +5,9 @@
  ;; If there is more than one, they won't work right.
  '(appt-audible nil)
  '(coffee-tab-width 2)
- '(compilation-error-regexp-alist (quote (absoft ada aix ant bash borland python-tracebacks-and-caml comma cucumber edg-1 edg-2 epc ftnchek iar ibm irix java jikes-file maven jikes-line gcc-include ruby-Test::Unit gnu lcc makepp mips-1 mips-2 msft omake oracle perl php rxp sparc-pascal-file sparc-pascal-line sparc-pascal-example sun sun-ada watcom 4bsd gcov-file gcov-header gcov-nomark gcov-called-line gcov-never-called perl--Pod::Checker perl--Test perl--Test2 perl--Test::Harness weblint jslint)))
+ '(compilation-error-regexp-alist
+   (quote
+    (absoft ada aix ant bash borland python-tracebacks-and-caml comma cucumber edg-1 edg-2 epc ftnchek iar ibm irix java jikes-file maven jikes-line gcc-include ruby-Test::Unit gnu lcc makepp mips-1 mips-2 msft omake oracle perl php rxp sparc-pascal-file sparc-pascal-line sparc-pascal-example sun sun-ada watcom 4bsd gcov-file gcov-header gcov-nomark gcov-called-line gcov-never-called perl--Pod::Checker perl--Test perl--Test2 perl--Test::Harness weblint jslint)))
  '(custom-enabled-themes (quote (wheatgrass)))
  '(display-time-day-and-date t)
  '(display-time-default-load-average 0)
@@ -18,10 +20,19 @@
  '(js2-basic-offset 2)
  '(magit-default-tracking-name-function (quote magit-default-tracking-name-branch-only))
  '(magit-diff-refine-hunk (quote all))
- '(newsticker-url-list (quote (("Rubygems | Latest Versions for passenger" "https://rubygems.org/gems/passenger/versions.atom" nil nil nil) ("News/NYT > Home Page" "http://feeds.nytimes.com/nyt/rss/HomePage" nil nil nil) ("News/Slashdot" "http://rss.slashdot.org/Slashdot/slashdot" nil nil nil) ("News/Hacker News" "http://news.ycombinator.com/rss" nil nil nil) ("Ruby News" "http://www.ruby-lang.org/en/feeds/news.rss" nil nil nil) ("cve/All National Vulnerability Database" "http://nvd.nist.gov/download/nvd-rss.xml" nil nil nil))))
+ '(newsticker-url-list
+   (quote
+    (("Rubygems | Latest Versions for passenger" "https://rubygems.org/gems/passenger/versions.atom" nil nil nil)
+     ("News/NYT > Home Page" "http://feeds.nytimes.com/nyt/rss/HomePage" nil nil nil)
+     ("News/Slashdot" "http://rss.slashdot.org/Slashdot/slashdot" nil nil nil)
+     ("News/Hacker News" "http://news.ycombinator.com/rss" nil nil nil)
+     ("Ruby News" "http://www.ruby-lang.org/en/feeds/news.rss" nil nil nil)
+     ("cve/All National Vulnerability Database" "http://nvd.nist.gov/download/nvd-rss.xml" nil nil nil))))
  '(org-agenda-files (quote ("~/org/gtd.org")))
  '(org-mobile-directory "~/Dropbox/MobileOrg")
- '(org-modules (quote (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
+ '(org-modules
+   (quote
+    (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
