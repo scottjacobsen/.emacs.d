@@ -30,22 +30,20 @@
   "Connects chat sessions."
   (erc :server "bitlbee"
        :nick "scott"
-       :password (concat "scott/bitlbee:" bitlbee-password))
-  (erc :server "freenode"
-       :nick "scott"
-       :password (concat "scott/freenode:" bitlbee-password))
-  (erc :server "oftc"
-       :nick "scott"
-       :password (concat "scott/oftc:" bitlbee-password))
-  (erc :server "mozilla"
-       :nick "mozilla"
-       :password (concat "scott/mozilla:" bitlbee-password)))
+       :password (concat "scott/bitlbee:" bitlbee-password)))
+  ;; (erc :server "freenode"
+  ;;      :nick "scott"
+  ;;      :password (concat "scott/freenode:" bitlbee-password))
+  ;; (erc :server "oftc"
+  ;;      :nick "scott"
+  ;;      :password (concat "scott/oftc:" bitlbee-password))
+  ;; (erc :server "mozilla"
+  ;;      :nick "mozilla"
+  ;;      :password (concat "scott/mozilla:" bitlbee-password)))
 
 (global-set-key (kbd "C-c eb") (lambda() (interactive) (chat-connect)))
 
-(setq erc-autojoin-channels-alist '(("freenode" "#emacs")
-                                    ("bitlbee" "#neighborland" "#twitter_jacobsenscott")
-                                    ("oftc" "#bitlbee")))
+(setq erc-autojoin-channels-alist '(("bitlbee" "#neighborland" "#twitter_jacobsenscott")))
 
 
 
