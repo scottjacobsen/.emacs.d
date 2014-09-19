@@ -37,6 +37,9 @@
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
+;; (setq system-uses-terminfo nil)
+(define-key global-map (kbd "C-x C-c") (lambda() (interactive)
+                                         (message "You literally never want that.")))
 (require 'package)
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
