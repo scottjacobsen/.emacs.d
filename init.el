@@ -40,6 +40,10 @@
 ;; (setq system-uses-terminfo nil)
 (define-key global-map (kbd "C-x C-c") (lambda() (interactive)
                                          (message "You literally never want that.")))
+
+(add-hook 'term-mode-hook (lambda()
+        (setq yas-dont-activate t)))
+
 (require 'package)
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
