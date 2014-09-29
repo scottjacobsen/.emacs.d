@@ -1,5 +1,4 @@
 (require 'yasnippet)
 (setq yas-snippet-dirs "~/.emacs.d/snippets")
-(yas-global-mode)
-
+(add-hook 'prog-mode-hook 'yas-minor-mode)
 (provide '10yasnippet)
