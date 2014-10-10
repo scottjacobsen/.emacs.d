@@ -2,7 +2,10 @@
          (not (server-running-p)))
     (server-start))
 (setq ring-bell-function 'ignore)
-(scroll-bar-mode -1)
+(if (display-graphic-p)
+    (progn
+      (scroll-bar-mode -1)))
+
 (setq-default indent-tabs-mode nil)
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
