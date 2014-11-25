@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: concern
+# key: concern
+# binding: direct-keybinding
+# --
+module ${1:`(classify-buffer-name)`}
+  extend ActiveSupport::Concern
+
+  included do
+    $0
+  end${1:$$(yas-choose-value '("\n\n  module ClassMethods\n\n  end" ""))}
+end
