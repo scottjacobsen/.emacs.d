@@ -30,10 +30,10 @@
   "Connects chat sessions."
   (erc :server "bitlbee"
        :nick "scott"
-       :password (concat "scott/bitlbee:" bitlbee-password)))
-  ;; (erc :server "freenode"
-  ;;      :nick "scott"
-  ;;      :password (concat "scott/freenode:" bitlbee-password))
+       :password (concat "scott/bitlbee:" bitlbee-password))
+  (erc :server "freenode"
+       :nick "scott"
+       :password (concat "scott/freenode:" bitlbee-password)))
   ;; (erc :server "oftc"
   ;;      :nick "scott"
   ;;      :password (concat "scott/oftc:" bitlbee-password))

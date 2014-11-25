@@ -1,5 +1,12 @@
+;;; Package --- YAS settings
+;;; Commentary:
+;;; Setup yer yas
+;;; code:
 (require 'yasnippet)
 (setq yas-snippet-dirs "~/.emacs.d/snippets")
-(add-hook 'prog-mode-hook 'yas-minor-mode)
-(yas-global-mode 1)
+(yas-reload-all)
+(add-hook 'prog-mode-hook
+          '(lambda ()
+             (yas-minor-mode)))
 (provide '10yasnippet)
+;;; 10yasnippet.el ends here
