@@ -24,7 +24,7 @@
 (add-hook 'enh-ruby-mode-hook (lambda() (setq tab-width 2)))
 (add-hook 'enh-ruby-mode-hook (lambda() (local-set-key "\C-cd" 'yari)))
 (add-hook 'enh-ruby-mode-hook (lambda() (flycheck-mode)))
-(add-hook 'enh-ruby-mode-hook 'robe-mode)
+;;(add-hook 'enh-ruby-mode-hook 'robe-mode)
 (add-hook 'enh-ruby-mode-hook 'ruby-tools-mode)
 
 (provide '06ruby)

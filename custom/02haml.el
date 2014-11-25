@@ -1,5 +1,5 @@
 (setq auto-mode-alist (cons '("\\.haml" . haml-mode) auto-mode-alist))
-(add-hook 'haml-mode-hook 'robe-mode)
+;;(add-hook 'haml-mode-hook 'robe-mode)
 (add-hook 'haml-mode-hook 'ruby-tools-mode)
 (add-hook 'haml-mode-hook
           (lambda ()
