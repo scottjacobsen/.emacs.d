@@ -1,6 +1,8 @@
 (source gnu)
 (source melpa)
 
+(depends-on "ag")
+(depends-on "aggressive-indent")
 (depends-on "auto-complete")
 (depends-on "bundler")
 (depends-on "cask")
@@ -28,6 +30,7 @@
 (depends-on "pallet")
 (depends-on "projectile")
 (depends-on "robe")
+(depends-on "ruby-compilation")
 (depends-on "ruby-refactor")
 (depends-on "ruby-tools")
 (depends-on "rvm")
@@ -39,4 +42,3 @@
 (depends-on "yari")
 (depends-on "yasnippet")
 (depends-on "zenburn-theme")
-(depends-on "ruby-compilation")
