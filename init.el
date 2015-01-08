@@ -92,7 +92,7 @@
   (add-hook hook (lambda () (flyspell-prog-mode)))
   )
 
-(dolist (hook '(diary-mode-hook text-mode-hook mail-mode-hook org-mode-hook rcirc-mode-hook))
+(dolist (hook '(diary-mode-hook text-mode-hook message-mode-hook org-mode-hook rcirc-mode-hook))
   (add-hook hook (lambda () (flyspell-mode)))
   )
 
