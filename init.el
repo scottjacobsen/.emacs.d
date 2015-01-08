@@ -46,6 +46,7 @@
 (cask-initialize)
 
 (require 'pallet)
+(pallet-mode t)
 (require 'uniquify)
 (require 'fliptext)
 (require 'iedit)
