@@ -11,6 +11,7 @@
 (depends-on "column-enforce-mode")
 (depends-on "dash")
 (depends-on "epl")
+(depends-on "etags-select")
 (depends-on "f")
 (depends-on "fliptext")
 (depends-on "floobits")
