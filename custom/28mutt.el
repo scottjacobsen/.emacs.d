@@ -3,7 +3,7 @@
 ;;  Compilation mode stuff
 ;;;
 ;;; Code:
-(add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
+(add-to-list 'auto-mode-alist '("/mutt" . message-mode))
 (add-hook 'message-mode-hook 'turn-on-auto-fill)
 (provide '28mutt)
 ;; (setq compilation-error-regexp-alist
