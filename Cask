@@ -32,6 +32,7 @@
 (depends-on "projectile")
 (depends-on "robe")
 (depends-on "ruby-compilation")
+(depends-on "ruby-hash-syntax")
 (depends-on "ruby-refactor")
 (depends-on "ruby-tools")
 (depends-on "rvm")
