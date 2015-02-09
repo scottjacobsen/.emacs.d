@@ -2,8 +2,8 @@
 ;;; Commentary:
 ;;; search stuff
 ;;; Code:
-(defvar ag-highlight-search)
 
+(defvar ag-highlight-search)
 (setq ag-highlight-search 't)
 
 (global-set-key (kbd "C-c g") 'ag-project-regexp)

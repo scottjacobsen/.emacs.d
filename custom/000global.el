@@ -5,10 +5,10 @@
 (if (display-graphic-p)
     (progn
       (scroll-bar-mode -1)))
-
+(scroll-bar-mode -1)
 (setq-default indent-tabs-mode nil)
 (global-set-key (kbd "C-z") 'undo)
-(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-c s") 'ansi-term)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (setq kill-read-only-ok 1)
@@ -69,4 +69,4 @@
      (clear-visited-file-modtime))
 (global-set-key (kbd "C-c C-t") 'touch)
 
-(provide '00global)
+(provide '000global)

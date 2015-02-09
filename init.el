@@ -18,6 +18,7 @@
  '(inhibit-startup-screen t)
  '(js-enabled-frameworks (quote (javascript)))
  '(js2-basic-offset 2)
+ '(linum-format (quote dynamic))
  '(magit-default-tracking-name-function (quote magit-default-tracking-name-branch-only))
  '(magit-diff-refine-hunk (quote all))
  '(newsticker-url-list
@@ -85,6 +86,9 @@
       (and buffer-name (camelize-file buffer-name))
       ("Class")))
 
+(defun spec-for-buffer-name ()
+  "Given a buffer named like foo_bar_spec return FooBar."
+  (substring (classify-buffer-name) 0 -4))
 
 ;;;
 ;;; Flyspell mode
@@ -139,6 +143,7 @@
  '(diff-removed ((t (:foreground "red"))))
  '(erm-syn-errline ((t nil)))
  '(erm-syn-warnline ((t nil)))
+ '(linum ((t (:background "#3F3F3F" :foreground "#9FC59F" :slant oblique))))
  '(log-view-message ((t nil))))
 
 ;;;
