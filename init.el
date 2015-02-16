@@ -181,3 +181,4 @@
       number-of-diary-entries 7)
 (add-hook 'diary-display-hook 'fancy-diary-display)
 (add-hook 'today-visible-calendar-hook 'calendar-mark-today)
+(put 'erase-buffer 'disabled nil)
