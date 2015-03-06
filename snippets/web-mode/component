@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: React component
+# key: rc
+# binding: direct-keybinding
+# --
+/** @jsx React.DOM */
+
+var ${1:`(classify-buffer-name)`} = React.createClass({
+  $0
+});

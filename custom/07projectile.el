@@ -9,4 +9,6 @@
 (defun projectile-rails-zeus-p ()
   (file-exists-p "/tmp/zeus.sock"))
 
+(setq projectile-rails-expand-snippet nil)
+
 (provide '07projectile)

@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: integration spec
+# key: ints
+# binding: direct-keybinding
+# --
+require "spec_helper"
+
+class ${1:`(classify-buffer-name)`} < ActionDispatch::IntegrationTest
+  $0
+end

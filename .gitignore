@@ -17,3 +17,5 @@ enhanced-ruby-mode
 games/
 places
 org-clock-save.el
+.mc-lists.el
+image-dired/
