@@ -1,0 +1,11 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: draper decorator
+# key: dd
+# binding: direct-keybinding
+# --
+class ${1:`(classify-buffer-name)`} < Draper::Decorator
+  include Draper::LazyHelpers
+  delegate_all
+
+  $0
+end
