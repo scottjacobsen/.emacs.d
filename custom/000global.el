@@ -83,4 +83,10 @@
           (message "Deleted file %s" filename)
           (kill-buffer))))))
 
+(defun chomp (str)
+  "Chomp leading and tailing whitespace from STR."
+  (replace-regexp-in-string (rx (or (: bos (* (any " \t\n")))
+                                    (: (* (any " \t\n")) eos)))
+                            ""
+                            str))
 (provide '000global)
