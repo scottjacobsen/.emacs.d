@@ -4,7 +4,7 @@
 ;;; Code:
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
-(with-eval-after-load "flycheck"
+(eval-after-load "flycheck" '(progn
   (flycheck-define-checker jsxhint-checker
     "A JSX syntax and style checker based on JSXHint."
 
@@ -18,9 +18,9 @@
               (when (equal web-mode-content-type "jsx")
                 ;; enable flycheck
                 (flycheck-select-checker 'jsxhint-checker)
-                (flycheck-mode)))))
+                (flycheck-mode))))))
 
-(with-eval-after-load "web-mode"
+(eval-after-load "web-mode" '(progn
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-markup-indent-offset 2)
@@ -31,7 +31,7 @@
     (if (equal web-mode-content-type "jsx")
         (let ((web-mode-enable-part-face nil))
           ad-do-it)
-      ad-do-it)))
+      ad-do-it))))
 
 (provide '33jsx)
 ;;; 33jsx.el ends here
