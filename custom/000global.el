@@ -89,4 +89,6 @@
                                     (: (* (any " \t\n")) eos)))
                             ""
                             str))
+
+(setq linum-format "%d ")
 (provide '000global)
