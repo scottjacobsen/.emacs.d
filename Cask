@@ -50,6 +50,7 @@
 (depends-on "scss-mode")
 (depends-on "slim-mode")
 (depends-on "smartparens")
+(depends-on "solarized-theme")
 (depends-on "web-mode")
 (depends-on "yagist")
 (depends-on "yaml-mode")

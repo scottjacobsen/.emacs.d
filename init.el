@@ -13,6 +13,7 @@
  '(display-time-default-load-average 0)
  '(display-time-mode t)
  '(enh-ruby-check-syntax nil)
+ '(frame-background-mode (quote dark))
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)

@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: collection input
+# key: fcollection
+# binding: direct-keybinding
+# --
+
+= f.input ${1::field}, collection: ${2:Rental::UTILITIES}, as: ${3::radio_buttons},
+          label_method: -> (value) { value.to_s.humanize }$0
