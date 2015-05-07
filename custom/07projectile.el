@@ -5,6 +5,8 @@
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 (global-set-key (kbd "C-c t") 'projectile-find-file)
 
+(setq projectile-mode-line
+      '(:eval (format " P[%s]" (projectile-project-name))))
 ;;; Override
 (defun projectile-rails-zeus-p ()
   (file-exists-p "/tmp/zeus.sock"))
