@@ -61,13 +61,13 @@
 
 (add-to-list 'auto-mode-alist '("\\.envrc$" . sh-mode))
 
-
-(defun touch ()
-     "updates mtime on the file for the current buffer"
-     (interactive)
-     (shell-command (concat "touch " (shell-quote-argument (buffer-file-name))))
-     (clear-visited-file-modtime))
-(global-set-key (kbd "C-c C-t") 'touch)
+(defun my-test ()
+  "tests this file"
+  (interactive)
+  (let ((default-directory (git-root)))
+    (async-shell-command
+     (concat (git-root) "bin/test " (shell-quote-argument (expand-file-name (buffer-file-name)))))))
+(global-set-key (kbd "C-c C-t") 'my-test)
 
 (global-discover-mode 1)
 
