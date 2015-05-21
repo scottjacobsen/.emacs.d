@@ -11,7 +11,6 @@
 (depends-on "column-enforce-mode")
 (depends-on "dash")
 (depends-on "discover")
-(depends-on "enh-ruby-mode")
 (depends-on "epl")
 (depends-on "etags-select")
 (depends-on "f")

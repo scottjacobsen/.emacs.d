@@ -93,7 +93,7 @@
 ;;;
 ;;; Flyspell mode
 ;;;
-(dolist (hook '(enh-ruby-mode-hook ruby-mode-hook markdown-mode-hook haml-mode-hook js-mode js2-mode))
+(dolist (hook '(ruby-mode-hook markdown-mode-hook haml-mode-hook js-mode js2-mode))
   (add-hook hook (lambda () (flyspell-prog-mode)))
   )
 
@@ -104,7 +104,7 @@
 ;;;
 ;;; indent magic
 ;;;
-(dolist (hook '(enh-ruby-mode-hook ruby-mode-hook markdown-mode-hook js-mode js2-mode))
+(dolist (hook '(ruby-mode-hook markdown-mode-hook js-mode js2-mode))
   (add-hook hook (lambda () (electric-indent-mode)))
   )
 
