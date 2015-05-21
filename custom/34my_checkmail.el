@@ -29,6 +29,7 @@
 
 (my-check-mail-timer)
 
+(add-to-list 'global-mode-string " ")
 (add-to-list 'global-mode-string
              '(:eval (propertize (if my-have-mail-p " ^| " "")
                                  'face 'my-mail-face 'display my-mail-icon)))

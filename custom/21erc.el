@@ -43,8 +43,8 @@
 
 (global-set-key (kbd "C-c eb") (lambda() (interactive) (chat-connect)))
 
-(setq erc-autojoin-channels-alist '(("bitlbee" "#neighborland" "#twitter_jacobsenscott" "#bfdev" "#daily_standups")))
-
+(setq erc-autojoin-channels-alist '(("bitlbee" "#twitter_jacobsenscott")))
+(setq erc-track-position-in-mode-line t)
 
 
 (provide '21erc)
