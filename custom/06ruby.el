@@ -19,5 +19,10 @@
 (add-hook 'ruby-mode-hook (lambda() (flycheck-mode)))
 (add-hook 'ruby-mode-hook 'ruby-tools-mode)
 
+(add-to-list 'hs-special-modes-alist
+	     '(ruby-mode
+	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
+	       (lambda (arg) (ruby-end-of-block)) nil))
+
 (provide '06ruby)
 ;;; 06ruby.el ends here
