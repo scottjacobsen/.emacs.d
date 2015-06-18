@@ -24,5 +24,7 @@
 	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
 	       (lambda (arg) (ruby-end-of-block)) nil))
 
+(setq ruby-insert-encoding-magic-comment nil)
+
 (provide '06ruby)
 ;;; 06ruby.el ends here

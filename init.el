@@ -9,6 +9,9 @@
    (quote
     (absoft ada aix ant bash borland python-tracebacks-and-caml comma cucumber edg-1 edg-2 epc ftnchek iar ibm irix java jikes-file maven jikes-line gcc-include ruby-Test::Unit gnu lcc makepp mips-1 mips-2 msft omake oracle perl php rxp sparc-pascal-file sparc-pascal-line sparc-pascal-example sun sun-ada watcom 4bsd gcov-file gcov-header gcov-nomark gcov-called-line gcov-never-called perl--Pod::Checker perl--Test perl--Test2 perl--Test::Harness weblint jslint)))
  '(custom-enabled-themes (quote (wheatgrass)))
+ '(custom-safe-themes
+   (quote
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(display-time-day-and-date t)
  '(display-time-default-load-average 0)
  '(display-time-mode t)
@@ -21,6 +24,7 @@
  '(js2-basic-offset 2)
  '(magit-default-tracking-name-function (quote magit-default-tracking-name-branch-only))
  '(magit-diff-refine-hunk (quote all))
+ '(magit-diff-use-overlays nil)
  '(newsticker-url-list
    (quote
     (("Rubygems | Latest Versions for passenger" "https://rubygems.org/gems/passenger/versions.atom" nil nil nil)
@@ -52,9 +56,9 @@
 (require 'fliptext)
 (require 'iedit)
 
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+;; (ac-config-default)
 
 (add-to-list 'load-path "~/.emacs.d/custom")
 (add-hook 'after-init-hook #'global-flycheck-mode)
