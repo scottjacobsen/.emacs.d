@@ -11,11 +11,14 @@
  '(custom-enabled-themes (quote (wheatgrass)))
  '(custom-safe-themes
    (quote
-    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+    ("bcc6775934c9adf5f3bd1f428326ce0dcd34d743a92df48c128e6438b815b44f" "11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(display-time-day-and-date t)
  '(display-time-default-load-average 0)
  '(display-time-mode t)
  '(enh-ruby-check-syntax nil)
+ '(erc-modules
+   (quote
+    (autojoin button completion irccontrols list match menu move-to-prompt netsplit networks noncommands readonly replace ring stamp spelling track)))
  '(frame-background-mode (quote dark))
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
@@ -25,6 +28,8 @@
  '(magit-default-tracking-name-function (quote magit-default-tracking-name-branch-only))
  '(magit-diff-refine-hunk (quote all))
  '(magit-diff-use-overlays nil)
+ '(magit-rebase-arguments nil)
+ '(magit-revert-buffers nil)
  '(newsticker-url-list
    (quote
     (("Rubygems | Latest Versions for passenger" "https://rubygems.org/gems/passenger/versions.atom" nil nil nil)

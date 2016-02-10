@@ -1,6 +1,5 @@
-(add-hook 'ruby-mode-hook (lambda () (highlight-indentation-current-column-mode)))
+(add-hook 'prog-mode-hook (lambda () (highlight-indentation-current-column-mode)))
 (add-hook 'haml-mode-hook (lambda () (highlight-indentation-current-column-mode)))
 (add-hook 'yaml-mode-hook (lambda () (highlight-indentation-current-column-mode)))
-(add-hook 'js-mode-hook (lambda () (highlight-indentation-current-column-mode)))
 
 (provide '09highlight-indentation)

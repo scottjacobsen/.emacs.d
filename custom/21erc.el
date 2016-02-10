@@ -12,6 +12,7 @@
     (if (looking-at
     	 "^<root> Message from unknown participant \\([^:]+\\):")
     	(replace-match "<\\1>"))))
+
 (add-hook 'erc-insert-modify-hook 'my-reformat-jabber-backlog)
 (erc-spelling-mode)
 
@@ -26,14 +27,18 @@
                                    (erc-default-target)
                                    bitlbee-password))))
 
+(setq erc-replace-alist
+      '(("<a.*?>\\(.*?\\)</a>" . (replace-match "\\1")) ("<br />" . "")))
+
 (defun chat-connect ()
   "Connects chat sessions."
   (erc :server "bitlbee"
        :nick "scott"
-       :password (concat "scott/bitlbee:" bitlbee-password))
-  (erc :server "freenode"
-       :nick "scott"
-       :password (concat "scott/freenode:" bitlbee-password)))
+       :port "6668"
+       :password (concat "scott/bitlbee:" bitlbee-password)))
+  ;; (erc :server "freenode"
+  ;;      :nick "scott"
+  ;;      :password (concat "scott/freenode:" bitlbee-password)))
   ;; (erc :server "oftc"
   ;;      :nick "scott"
   ;;      :password (concat "scott/oftc:" bitlbee-password))

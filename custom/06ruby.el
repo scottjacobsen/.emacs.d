@@ -18,6 +18,7 @@
 (add-hook 'ruby-mode-hook (lambda() (setq tab-width 2)))
 (add-hook 'ruby-mode-hook (lambda() (flycheck-mode)))
 (add-hook 'ruby-mode-hook 'ruby-tools-mode)
+(add-hook 'ruby-mode-hook 'robe-mode)
 
 (add-to-list 'hs-special-modes-alist
 	     '(ruby-mode
