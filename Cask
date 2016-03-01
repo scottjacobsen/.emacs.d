@@ -48,6 +48,7 @@
 (depends-on "slim-mode")
 (depends-on "smartparens")
 (depends-on "solarized-theme")
+(depends-on "tao-theme")
 (depends-on "web-mode")
 (depends-on "yagist")
 (depends-on "yaml-mode")

@@ -1,4 +1,6 @@
-(load-theme 'zenburn t)
+(load-theme 'tao-yin t)
+(require 'powerline)
+(powerline-default-theme)
 ;; (when (display-graphic-p)
 ;;   (load-theme 'hc-zenburn t))
 

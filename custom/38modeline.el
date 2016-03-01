@@ -26,7 +26,7 @@
                ;; the current major mode for the buffer.
                "["
 
-               '(:eval (propertize "%m" 'face 'font-lock-string-face
+               '(:eval (propertize "%m" 'face 'font-lock-constant-face
                                    'help-echo buffer-file-coding-system))
                "] "
 

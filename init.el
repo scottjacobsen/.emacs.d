@@ -157,6 +157,7 @@
  '(diff-removed ((t (:foreground "red"))))
  '(erm-syn-errline ((t nil)))
  '(erm-syn-warnline ((t nil)))
+ '(helm-match ((t (:background "#252525" :foreground "dark cyan" :weight bold))))
  '(log-view-message ((t nil))))
 
 ;;;
