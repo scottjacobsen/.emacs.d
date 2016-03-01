@@ -20,6 +20,11 @@
    (quote
     (autojoin button completion irccontrols list match menu move-to-prompt netsplit networks noncommands readonly replace ring stamp spelling track)))
  '(frame-background-mode (quote dark))
+ '(helm-autoresize-mode t)
+ '(helm-display-header-line nil)
+ '(helm-full-frame nil)
+ '(helm-ls-git-show-abs-or-relative (quote relative))
+ '(helm-split-window-in-side-p t)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
