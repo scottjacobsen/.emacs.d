@@ -10,6 +10,8 @@
 (depends-on "column-enforce-mode")
 (depends-on "dash")
 (depends-on "dockerfile-mode")
+(depends-on "edit-server")
+(depends-on "emojify")
 (depends-on "epl")
 (depends-on "etags-select")
 (depends-on "f")

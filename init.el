@@ -15,6 +15,8 @@
  '(display-time-day-and-date t)
  '(display-time-default-load-average 0)
  '(display-time-mode t)
+ '(emojify-display-style (quote image))
+ '(emojify-emoji-styles (quote (github unicode)))
  '(enh-ruby-check-syntax nil)
  '(erc-modules
    (quote
