@@ -26,6 +26,7 @@
 (depends-on "helm-projectile")
 (depends-on "helm-swoop")
 (depends-on "highlight-indentation")
+(depends-on "hlinum")
 (depends-on "iedit")
 (depends-on "js2-mode")
 (depends-on "json-mode")
