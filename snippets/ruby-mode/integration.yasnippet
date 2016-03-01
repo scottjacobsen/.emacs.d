@@ -2,13 +2,15 @@
 # name: integration
 # key: integration
 # --
+# frozen_string_literal: true
+
 require "test_helper"
 require_relative "givens"
 
 class ${1:`(classify-buffer-name)`} < ActionDispatch::IntegrationTest
   include Givens
 
-  setup do
+  before do
     $0
   end
 end
