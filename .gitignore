@@ -19,3 +19,5 @@ places
 org-clock-save.el
 .mc-lists.el
 image-dired/
+emojis
+rake.cache

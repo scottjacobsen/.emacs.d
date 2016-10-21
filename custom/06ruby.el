@@ -27,5 +27,8 @@
 
 (setq ruby-insert-encoding-magic-comment nil)
 
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
+
 (provide '06ruby)
 ;;; 06ruby.el ends here

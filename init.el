@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -11,7 +18,7 @@
  '(custom-enabled-themes (quote (wheatgrass)))
  '(custom-safe-themes
    (quote
-    ("a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "20e359ef1818a838aff271a72f0f689f5551a27704bf1c9469a5c2657b417e6c" "bcc6775934c9adf5f3bd1f428326ce0dcd34d743a92df48c128e6438b815b44f" "11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+    ("0e219d63550634bc5b0c214aced55eb9528640377daf486e13fb18a32bf39856" "cdbd0a803de328a4986659d799659939d13ec01da1f482d838b68038c1bb35e8" "1fab355c4c92964546ab511838e3f9f5437f4e68d9d1d073ab8e36e51b26ca6a" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "f3d6a49e3f4491373028eda655231ec371d79d6d2a628f08d5aa38739340540b" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "20e359ef1818a838aff271a72f0f689f5551a27704bf1c9469a5c2657b417e6c" "bcc6775934c9adf5f3bd1f428326ce0dcd34d743a92df48c128e6438b815b44f" "11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(display-time-day-and-date t)
  '(display-time-default-load-average 0)
  '(display-time-mode t)
@@ -46,10 +53,14 @@
      ("Ruby News" "http://www.ruby-lang.org/en/feeds/news.rss" nil nil nil)
      ("cve/All National Vulnerability Database" "http://nvd.nist.gov/download/nvd-rss.xml" nil nil nil))))
  '(org-agenda-files (quote ("~/org/gtd.org")))
+ '(org-babel-load-languages (quote ((awk . t) (ruby . t))))
  '(org-mobile-directory "~/Dropbox/MobileOrg")
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
+ '(package-selected-packages
+   (quote
+    (zenburn-theme yasnippet yaml-mode yagist web-mode tao-theme solarized-theme smartparens slim-mode scss-mode ruby-tools ruby-refactor ruby-hash-syntax ruby-compilation robe rainbow-mode quasi-monochrome-theme projectile-rails pallet org-present multiple-cursors monochrome-theme minimap markdown-mode magit lua-mode less-css-mode jsx-mode json-mode js2-mode iedit hlinum highlight-indentation helm-swoop helm-projectile helm-ls-git helm-google helm-flx helm-descbinds helm-ag hc-zenburn-theme haml-mode flycheck flx-ido etags-select emojify elixir-mode edit-server dockerfile-mode company column-enforce-mode coffee-mode clojure-mode chruby bundler aggressive-indent ag)))
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
@@ -197,3 +208,6 @@
 (add-hook 'diary-display-hook 'fancy-diary-display)
 (add-hook 'today-visible-calendar-hook 'calendar-mark-today)
 (put 'erase-buffer 'disabled nil)
+
+(add-to-list 'load-path "/usr/local/Cellar/mu/0.9.16/share/emacs/site-lisp/mu/mu4e")
+(require 'mu4e)

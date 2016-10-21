@@ -11,5 +11,6 @@
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "M-s o") 'helm-swoop)
+(helm-flx-mode +1)
 (provide '001helm)
 ;;; 001helm.el ends here

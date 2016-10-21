@@ -66,7 +66,7 @@
   (interactive)
   (let ((default-directory (git-root)))
     (async-shell-command
-     (concat "bin/rake test "
+     (concat "bin/test "
              (replace-regexp-in-string (git-root) "" (shell-quote-argument (expand-file-name (buffer-file-name))))))))
 (global-set-key (kbd "C-c C-t") 'my-test)
 
