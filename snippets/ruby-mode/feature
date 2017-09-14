@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: rspec_feature
+# key: feature
+# --
+# frozen_string_literal: true
+
+require "rails_helper"
+
+feature "$0" do
+end

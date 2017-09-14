@@ -1,6 +1,3 @@
-(if (and (fboundp 'server-running-p)
-         (not (server-running-p)))
-    (server-start))
 (setq ring-bell-function 'ignore)
 (if (display-graphic-p)
     (progn

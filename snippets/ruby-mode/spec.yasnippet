@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: spec
+# key: spec
+# --
+# frozen_string_literal: true
+
+require "rails_helper"
+
+RSpec.describe $1${`(spec-for-buffer-name)`} do
+  $0
+end

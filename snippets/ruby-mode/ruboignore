@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: ruboignore
+# key: ruboignore
+# --
+# rubocop:disable ${1:Style/Foo}
+# rubocop:enable $1

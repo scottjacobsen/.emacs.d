@@ -18,7 +18,6 @@
 (add-hook 'ruby-mode-hook (lambda() (setq tab-width 2)))
 (add-hook 'ruby-mode-hook (lambda() (flycheck-mode)))
 (add-hook 'ruby-mode-hook 'ruby-tools-mode)
-(add-hook 'ruby-mode-hook 'robe-mode)
 
 (add-to-list 'hs-special-modes-alist
 	     '(ruby-mode
@@ -26,9 +25,6 @@
 	       (lambda (arg) (ruby-end-of-block)) nil))
 
 (setq ruby-insert-encoding-magic-comment nil)
-
-(eval-after-load 'company
-  '(push 'company-robe company-backends))
 
 (provide '06ruby)
 ;;; 06ruby.el ends here

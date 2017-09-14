@@ -12,6 +12,9 @@
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "M-s o") 'helm-swoop)
+(global-set-key (kbd "C-c t") 'helm-browse-project)
+(global-set-key (kbd "C-c p s s") 'helm-do-ag-project-root)
+(global-set-key (kbd "M-.") 'helm-etags-select)
 (helm-flx-mode +1)
 (provide '001helm)
 ;;; 001helm.el ends here
