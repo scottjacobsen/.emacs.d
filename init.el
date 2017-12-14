@@ -1,4 +1,3 @@
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -18,7 +17,7 @@
  '(custom-enabled-themes (quote (wheatgrass)))
  '(custom-safe-themes
    (quote
-    ("67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" "a0dc0c1805398db495ecda1994c744ad1a91a9455f2a17b59b716f72d3585dde" "f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "3d47d88c86c30150c9a993cc14c808c769dad2d4e9d0388a24fee1fbf61f0971" "14f0fbf6f7851bfa60bf1f30347003e2348bf7a1005570fd758133c87dafe08f" "4e753673a37c71b07e3026be75dc6af3efbac5ce335f3707b7d6a110ecb636a3" "0e219d63550634bc5b0c214aced55eb9528640377daf486e13fb18a32bf39856" "cdbd0a803de328a4986659d799659939d13ec01da1f482d838b68038c1bb35e8" "1fab355c4c92964546ab511838e3f9f5437f4e68d9d1d073ab8e36e51b26ca6a" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "f3d6a49e3f4491373028eda655231ec371d79d6d2a628f08d5aa38739340540b" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "20e359ef1818a838aff271a72f0f689f5551a27704bf1c9469a5c2657b417e6c" "bcc6775934c9adf5f3bd1f428326ce0dcd34d743a92df48c128e6438b815b44f" "11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+    ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" "a0dc0c1805398db495ecda1994c744ad1a91a9455f2a17b59b716f72d3585dde" "f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "3d47d88c86c30150c9a993cc14c808c769dad2d4e9d0388a24fee1fbf61f0971" "14f0fbf6f7851bfa60bf1f30347003e2348bf7a1005570fd758133c87dafe08f" "4e753673a37c71b07e3026be75dc6af3efbac5ce335f3707b7d6a110ecb636a3" "0e219d63550634bc5b0c214aced55eb9528640377daf486e13fb18a32bf39856" "cdbd0a803de328a4986659d799659939d13ec01da1f482d838b68038c1bb35e8" "1fab355c4c92964546ab511838e3f9f5437f4e68d9d1d073ab8e36e51b26ca6a" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "f3d6a49e3f4491373028eda655231ec371d79d6d2a628f08d5aa38739340540b" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "20e359ef1818a838aff271a72f0f689f5551a27704bf1c9469a5c2657b417e6c" "bcc6775934c9adf5f3bd1f428326ce0dcd34d743a92df48c128e6438b815b44f" "11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(display-time-day-and-date t)
  '(display-time-default-load-average 0)
  '(display-time-mode t)
@@ -60,7 +59,7 @@
     (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
  '(package-selected-packages
    (quote
-    (multi-term flycheck-elm elm-mode csv-mode helm-c-yasnippet inf-ruby feature-mode zenburn-theme yasnippet yaml-mode yagist web-mode smartparens slim-mode scss-mode ruby-tools ruby-refactor ruby-hash-syntax rainbow-mode pallet org-present multiple-cursors markdown-mode magit jsx-mode json-mode js2-mode hlinum highlight-indentation helm-swoop helm-ls-git helm-google helm-flx helm-descbinds helm-ag haml-mode flycheck emojify edit-server company column-enforce-mode clojure-mode chruby ag)))
+    (hc-zenburn-theme dash-at-point projectile-rails multi-term flycheck-elm elm-mode csv-mode helm-c-yasnippet inf-ruby feature-mode zenburn-theme yasnippet yaml-mode yagist web-mode smartparens slim-mode scss-mode ruby-tools ruby-refactor ruby-hash-syntax rainbow-mode pallet org-present multiple-cursors markdown-mode magit jsx-mode json-mode js2-mode hlinum highlight-indentation helm-swoop helm-ls-git helm-google helm-flx helm-descbinds helm-ag haml-mode flycheck emojify edit-server company column-enforce-mode clojure-mode chruby ag)))
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
@@ -153,25 +152,6 @@
 (add-to-list 'auto-mode-alist '(".ssh/config\\'"  . ssh-config-mode))
 (add-to-list 'auto-mode-alist '("sshd?_config\\'" . ssh-config-mode))
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-enforce-face ((t (:background "black"))))
- '(diff-added ((t (:foreground "green"))))
- '(diff-file-header ((t (:foreground "cyan" :box (:line-width 1 :color "deep sky blue") :weight bold))))
- '(diff-header ((t nil)))
- '(diff-indicator-removed ((t (:foreground "red"))))
- '(diff-refine-added ((t (:inherit diff-refine-change :background "black" :foreground "#00bb00" :inverse-video t))))
- '(diff-refine-removed ((t (:inherit diff-refine-change :background "#660000" :foreground "black" :inverse-video nil))))
- '(diff-removed ((t (:foreground "red"))))
- '(erm-syn-errline ((t nil)))
- '(erm-syn-warnline ((t nil)))
- '(helm-match ((t (:background "#252525" :foreground "dark cyan" :weight bold))))
- '(log-view-message ((t nil))))
-
-
 ;; Calendar
 (setq view-diary-entries-initially t
       mark-diary-entries-in-calendar t
@@ -198,3 +178,8 @@ of seeing_is_believing."
 
 ;;Slack in emacs!
 (add-to-list 'load-path "~/dev/emacs-slack/")
+(setq dired-listing-switches "-alh")
+(add-hook 'dired-load-hook
+            (function (lambda () (load "dired-x"))))
+(set-default-font "-*-Hack-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1")
+(setq default-frame-alist '((font . "-*-Hack-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1")))

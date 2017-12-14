@@ -1,4 +1,5 @@
- (load-theme 'zenburn)
+(load-theme 'dracula)
+;;  (load-theme 'hc-zenburn)
 ;; (load-theme 'tao-yin t)
 ;; (load-theme 'monochrome t)
 ;; (load-theme 'quasi-monochrome t)

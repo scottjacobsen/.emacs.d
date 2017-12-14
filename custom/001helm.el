@@ -15,6 +15,7 @@
 (global-set-key (kbd "C-c t") 'helm-browse-project)
 (global-set-key (kbd "C-c p s s") 'helm-do-ag-project-root)
 (global-set-key (kbd "M-.") 'helm-etags-select)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (helm-flx-mode +1)
 (provide '001helm)
 ;;; 001helm.el ends here
