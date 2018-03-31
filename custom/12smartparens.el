@@ -1,6 +1,0 @@
-(smartparens-global-mode t)
-(require 'smartparens-config)
-(setq sp-autoescape-string-quote nil)
-(show-smartparens-global-mode t)
-
-(provide '12smartparens)

@@ -33,8 +33,6 @@
  '(helm-full-frame nil)
  '(helm-ls-git-show-abs-or-relative (quote relative))
  '(helm-split-window-in-side-p t)
- '(ido-everywhere t)
- '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
  '(js-enabled-frameworks (quote (javascript)))
  '(js2-basic-offset 2)
@@ -59,8 +57,10 @@
     (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
  '(package-selected-packages
    (quote
-    (hc-zenburn-theme dash-at-point projectile-rails multi-term flycheck-elm elm-mode csv-mode helm-c-yasnippet inf-ruby feature-mode zenburn-theme yasnippet yaml-mode yagist web-mode smartparens slim-mode scss-mode ruby-tools ruby-refactor ruby-hash-syntax rainbow-mode pallet org-present multiple-cursors markdown-mode magit jsx-mode json-mode js2-mode hlinum highlight-indentation helm-swoop helm-ls-git helm-google helm-flx helm-descbinds helm-ag haml-mode flycheck emojify edit-server company column-enforce-mode clojure-mode chruby ag)))
+    (w3m powerline helm-projectile dash-at-point projectile-rails multi-term helm-c-yasnippet inf-ruby feature-mode yasnippet yaml-mode yagist web-mode slim-mode scss-mode ruby-tools ruby-refactor ruby-hash-syntax rainbow-mode pallet org-present multiple-cursors markdown-mode magit jsx-mode json-mode js2-mode hlinum highlight-indentation helm-swoop helm-ls-git helm-google helm-flx helm-descbinds helm-ag flycheck emojify edit-server company column-enforce-mode chruby ag)))
+ '(projectile-completion-system (quote helm))
  '(safe-local-variable-values (quote ((encoding . utf-8))))
+ '(show-paren-style (quote mixed))
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
@@ -128,8 +128,12 @@
 ;;;
 ;;; indent magic
 ;;;
-(dolist (hook '(ruby-mode-hook markdown-mode-hook js-mode js2-mode))
+(dolist (hook '(prog-mode-hook))
   (add-hook hook (lambda () (electric-indent-mode)))
+  )
+
+(dolist (hook '(prog-mode-hook))
+  (add-hook hook (lambda () (show-paren-mode)))
   )
 
 ;;
@@ -182,4 +186,21 @@ of seeing_is_believing."
 (add-hook 'dired-load-hook
             (function (lambda () (load "dired-x"))))
 (set-default-font "-*-Hack-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1")
-(setq default-frame-alist '((font . "-*-Hack-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1")))
+(setq default-frame-alist '((font . "-*-Hack-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+(defun copy-file-name-to-clipboard ()
+  "Copy the current buffer file name to the clipboard."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer file name '%s' to the clipboard." filename))))

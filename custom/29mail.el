@@ -8,7 +8,7 @@
 (setq message-send-mail-function 'message-send-mail-with-sendmail)
 (setq sendmail-program "/usr/local/bin/msmtp")
 (setq user-full-name "Scott Jacobsen")
-(setq user-mail-address "jacobsenscott@yahoo.com")
+(setq user-mail-address "scottericjacobsen@gmail.com")
 (provide '29mail)
 ;; (setq compilation-error-regexp-alist
 ;;       (cdr compilation-error-regexp-alist))
