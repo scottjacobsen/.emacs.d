@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: cival
+# key: cival
+# --
+- name: ${1:name}
+  value: ${2:value}

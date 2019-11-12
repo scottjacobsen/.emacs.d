@@ -3,6 +3,6 @@
 ;;; Settings yo.
 ;;; Code:
 (require 'chruby)
-(chruby "ruby-2.4.2")
+(chruby "ruby-2.6.3")
 (provide '20chruby)
 ;;; 20chruby.el ends here

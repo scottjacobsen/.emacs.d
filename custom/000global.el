@@ -86,11 +86,10 @@
                             ""
                             str))
 
-(setq linum-format "%d ")
-
 (windmove-default-keybindings)
 (setq windmove-wrap-around t)
 (setq large-file-warning-threshold 100000000)
 
+(setq tags-table-list '("/Users/scott/dev/brightfunds/TAGS"))
 (provide '000global)
 ;;; 000global.el ends here

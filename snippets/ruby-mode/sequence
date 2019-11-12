@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sequence
+# key: sequence
+# --
+sequence(:${1:field}) { |n| "${2:value-#{n}}" }$0

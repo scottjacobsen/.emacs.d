@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: steps
+# key: steps
+# --
+# frozen_string_literal: true
+
+module ${1:`(classify-buffer-name)`}
+  step "$2" do
+    $0
+  end
+end
+
+RSpec.configure { |c| c.include $1 }

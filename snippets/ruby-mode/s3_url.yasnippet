@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: s3_url
+# key: s3_url
+# --
+${url} = Aws::S3::Resource.new(region: "${us-east-1}").bucket("${brightfunds-tmp}")
+            .object("${path}")
+            .presigned_url(:get, expires_in: ${15.minutes.to_i})
+$0

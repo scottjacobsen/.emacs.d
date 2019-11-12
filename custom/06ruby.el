@@ -19,11 +19,10 @@
 (add-hook 'ruby-mode-hook (lambda() (flycheck-mode)))
 (add-hook 'ruby-mode-hook 'ruby-tools-mode)
 (projectile-rails-global-mode)
-(add-to-list 'hs-special-modes-alist
-	     '(ruby-mode
-	       "\\(def\\|do\\|{\\)" "\\(end\\|end\\|}\\)" "#"
-	       (lambda (arg) (ruby-end-of-block)) nil))
 
+(global-robe-mode)
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
 (setq ruby-insert-encoding-magic-comment nil)
 
 (provide '06ruby)
