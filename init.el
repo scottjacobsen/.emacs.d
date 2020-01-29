@@ -57,7 +57,7 @@
     (org-bbdb org-bibtex org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
  '(package-selected-packages
    (quote
-    (github-review weechat-alert weechat robe csv-mode forge ghub+ dracula-theme zenburn-theme vagrant-tramp rjsx-mode w3m powerline helm-projectile dash-at-point projectile-rails multi-term helm-c-yasnippet inf-ruby feature-mode yasnippet yaml-mode yagist web-mode slim-mode scss-mode ruby-tools ruby-refactor ruby-hash-syntax rainbow-mode pallet org-present multiple-cursors markdown-mode magit jsx-mode json-mode js2-mode highlight-indentation helm-swoop helm-ls-git helm-google helm-flx helm-descbinds helm-ag flycheck emojify edit-server company column-enforce-mode chruby ag)))
+    (github-review weechat-alert weechat robe csv-mode forge ghub+ dracula-theme zenburn-theme vagrant-tramp rjsx-mode w3m powerline helm-projectile dash-at-point projectile-rails multi-term helm-c-yasnippet inf-ruby feature-mode yasnippet yaml-mode yagist web-mode slim-mode scss-mode ruby-tools ruby-refactor ruby-hash-syntax rainbow-mode pallet org-present multiple-cursors markdown-mode magit jsx-mode json-mode js2-mode highlight-indentation helm-ls-git helm-google helm-flx helm-descbinds helm-ag flycheck emojify edit-server company column-enforce-mode chruby ag)))
  '(projectile-completion-system (quote helm))
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(show-paren-mode t)

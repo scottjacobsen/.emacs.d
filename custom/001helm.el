@@ -11,7 +11,7 @@
 (setq helm-buffer-max-length 50)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "M-s o") 'helm-swoop)
+(global-set-key (kbd "M-s o") 'helm-occur)
 (global-set-key (kbd "C-c t") 'helm-browse-project)
 (global-set-key (kbd "C-c p s s") 'helm-do-ag-project-root)
 (global-set-key (kbd "M-.") 'helm-etags-select)
