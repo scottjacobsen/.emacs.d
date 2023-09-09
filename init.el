@@ -24,7 +24,7 @@
  '(js-indent-level 2)
  '(js2-strict-missing-semi-warning nil)
  '(package-selected-packages
-   '(restclient ligature yaml-mode js2-mode smartparens snow fireplace company-box editorconfig nix-mode vue-mode yasnippet-snippets yasnippet yas-snippets sokoban org-msg code-review mu4e ag consult-ag csv-mode embark-consult embark marginalia consult-projectile consult slim-mode doom-modeline lsp-ui lsp-mode rainbow-delimiters highlight-indentation highlight-indentation-mode feature-mode flycheck forge vterm magit robe robe-mode company which-key all-the-icons projectile-rails orderless projectile ace-window ace-jump-mode vertico dracula-theme use-package))
+   '(fish-mode restclient ligature yaml-mode js2-mode smartparens snow fireplace company-box editorconfig nix-mode vue-mode yasnippet-snippets yasnippet yas-snippets sokoban org-msg code-review mu4e ag consult-ag csv-mode embark-consult embark marginalia consult-projectile consult slim-mode doom-modeline lsp-ui lsp-mode rainbow-delimiters highlight-indentation highlight-indentation-mode feature-mode flycheck forge vterm magit robe robe-mode company which-key all-the-icons projectile-rails orderless projectile ace-window ace-jump-mode vertico dracula-theme use-package))
  '(tool-bar-mode nil)
  '(warning-suppress-types
    '(((flycheck syntax-checker))
@@ -38,9 +38,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#282a36" :foreground "#f8f8f2" :inverse-video nil :box nil :strike-through nil :extend nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "FiraCode Nerd Font Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "#282a36" :foreground "#f8f8f2" :inverse-video nil :box nil :strike-through nil :extend nil :overline nil :underline nil :slant normal :weight regular :height 140 :width normal :foundry "nil" :family "FiraCode Nerd Font Mono")))))
 (global-auto-revert-mode)
-
+(server-start)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (ffap-bindings)
 (global-hl-line-mode)
@@ -68,11 +68,12 @@
 
 
 ;; ORG-mode stuff
+(setq org-log-done 'time)
 (global-set-key (kbd "C-c c") #'org-capture)
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/notes.org" "Tasks")
+      '(("t" "Todo" entry (file+headline "~/org/notes.org.gpg" "Tasks")
          "* TODO %?\n  %i\n  %a")
-	("j" "Journal" entry (file+datetree "~/org/journal.org")
+	("j" "Journal" entry (file+datetree "~/org/journal.org.gpg")
 	 "* %?\n %i\n %a")))
 
 ;; INTERFACE ENHANCEMENT
@@ -85,7 +86,7 @@
 
 (use-package doom-modeline
   :ensure t
-  :init (doom-modeline-mode 1))
+  :hook (after-init . doom-modeline-mode))
 
 (use-package all-the-icons
   :ensure t)
@@ -173,18 +174,36 @@
   :init (global-flycheck-mode))
 
 ;; show line numbers in the fringe
-(use-package linum-mode
-  :hook prog-mode)
+;; (global-display-line-numbers-mode 1)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 (use-package company
   :ensure t
-  :init (global-company-mode))
+  :init (add-hook 'after-init-hook 'global-company-mode))
 
 (use-package robe
   :ensure t
   :init
-  (global-robe-mode)
+  (add-hook 'ruby-mode-hook 'robe-mode)
+  (add-hook 'ruby-ts-mode-hook 'robe-mode)
   (push 'company-robe company-backends))
+
+(setq inf-ruby-console-environment "development")
+(defun inf-ruby-console-rails (dir)
+  "Run Rails console in DIR."
+  (interactive (list (inf-ruby-console-read-directory 'rails)))
+  (let* ((default-directory (file-name-as-directory dir))
+         (env (inf-ruby-console-rails-env))
+         (with-bundler (file-exists-p "Gemfile")))
+    (inf-ruby-console-run
+     (concat (when with-bundler "aws-vault exec development -- bundle exec ")
+             "rails console -e "
+             env
+             ;; Note: this only has effect in Rails < 5.0 or >= 5.1.4
+             ;; https://github.com/rails/rails/pull/29010
+             (when (inf-ruby--irb-needs-nomultiline-p)
+               " -- --nomultiline --noreadline"))
+     "rails")))
 
 (use-package highlight-indentation
   :ensure t
@@ -354,18 +373,20 @@
 (use-package consult-projectile :ensure t)
 
 ;; Enable richer annotations using the Marginalia package
+; Enable rich annotations using the Marginalia package
 (use-package marginalia
-  :ensure t
-  ;; Either bind `marginalia-cycle` globally or only in the minibuffer
-  :bind (("M-A" . marginalia-cycle)
-         :map minibuffer-local-map
+  ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
+  ;; available in the *Completions* buffer, add it to the
+  ;; `completion-list-mode-map'.
+  :bind (:map minibuffer-local-map
          ("M-A" . marginalia-cycle))
 
-  ;; The :init configuration is always executed (Not lazy!)
+  ;; The :init section is always executed.
   :init
 
-  ;; Must be in the :init section of use-package such that the mode gets
-  ;; enabled right away. Note that this forces loading the package.
+  ;; Marginalia must be activated in the :init section of use-package such that
+  ;; the mode gets enabled right away. Note that this forces loading the
+  ;; package.
   (marginalia-mode))
 
 (use-package embark
@@ -380,7 +401,6 @@
 
   ;; Optionally replace the key help with a completing-read interface
   (setq prefix-help-command #'embark-prefix-help-command)
-
   :config
 
   ;; Hide the mode line of the Embark live/completions buffers
@@ -487,7 +507,7 @@
      :query "maildir:/wizehive/inbox and date:3w..")
   )
 
-(use-package code-review :ensure t)
+;; (use-package code-review :ensure t)
 (use-package org-msg :ensure t)
 (use-package yasnippet
   :ensure t
@@ -501,27 +521,28 @@
 (use-package editorconfig :ensure t)
 
 ;; COPILOT
-(add-to-list 'load-path (expand-file-name "lisp/copilot.el-main" user-emacs-directory))
-(require 'copilot)
-(add-hook 'prog-mode-hook 'copilot-mode)
-(with-eval-after-load 'company
-  ;; disable inline previews
-  (delq 'company-preview-if-just-one-frontend company-frontends))
+;; (add-to-list 'load-path (expand-file-name "lisp/copilot.el-main" user-emacs-directory))
+;; (require 'copilot)
+;; (add-hook 'prog-mode-hook 'copilot-mode)
+;; (with-eval-after-load 'company
+;;   ;; disable inline previews
+;;   (delq 'company-preview-if-just-one-frontend company-frontends))
 
-(define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
-(define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
-(define-key copilot-completion-map (kbd "M-n") 'copilot-next-completion)
-(define-key copilot-completion-map (kbd "M-p") 'copilot-previous-completion)
-(define-key copilot-completion-map (kbd "M-g") 'copilot-abort-completion)
-(define-key copilot-completion-map (kbd "M-<tab>") 'copilot-accept-completion-by-word)
+;; (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
+;; (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
+;; (define-key copilot-completion-map (kbd "M-n") 'copilot-next-completion)
+;; (define-key copilot-completion-map (kbd "M-p") 'copilot-previous-completion)
+;; (define-key copilot-completion-map (kbd "M-g") 'copilot-abort-completion)
+;; (define-key copilot-completion-map (kbd "M-<tab>") 'copilot-accept-completion-by-word)
 
 
 (use-package company-box
+  :ensure t
   :hook (company-mode . company-box-mode))
 
 (use-package restclient
   :ensure t)
-(setq org-default-notes-file (concat org-directory "/notes.org"))
+;; (setq org-default-notes-file (concat org-directory "/notes.org"))
 (put 'narrow-to-region 'disabled nil)
 
 (desktop-save-mode 1)
@@ -544,3 +565,4 @@
 (global-ligature-mode 't)
 (add-hook 'text-mode-hook (lambda () (flyspell-mode)))
 (add-hook 'prog-mode-hook (lambda () (flyspell-prog-mode)))
+(fset 'epg-wait-for-status 'ignore)
